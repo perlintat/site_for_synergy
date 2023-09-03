@@ -1,0 +1,391 @@
+html,body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+min-width: 300px;                   /* ADAPTATION здесь почему то ошибка */    
+
+img {display: inline-block;}        /*- отображение всех картинок на сайте как инлайн, убирает лишние отступы */
+
+/* {background: black;} */
+
+/*font-family: 'Arima', cursive;
+font-family: 'PT Sans Narrow', sans-serif; */
+
+img {display:inline-block;}
+a {transition: 0.5s case-out;}        /* тег a отвечает за все переходы, будут плавные */
+/* {box-sizing: ;}                    /* универсальный селектор */
+
+* {box-sizing: ;}                     /*  Универсальный селектор ко всем тегам на странице */
+
+
+
+
+/*------------------------
+GRID СЕТКА
+----------------------------*/
+
+.container {                      /* Контейнер/блок*/ 
+    width: 1200px;                /* ширина блока */
+    margin-left: auto;           /* выравнивание по левому */
+    margin-right: auto;          /* выравнивание про правому */
+}
+
+.row:after {clear: both;         /* псевдо класс, чтобы не было обтекания flow */
+content: "";
+display: table;}
+
+
+.column {                          /* описываем столбик в блоке */
+    text-align: center;
+    width: 360px;               /* ширина столбца */
+    margin-left: 30px;          /* выравнивание по левому */
+    float: left;                /* Ссылка *1 есть обтекание, которое можно убрать */
+}
+.column:last-child {margin-right: 0px;}    /* последнее в блоке, убирает зазор с левой стороны 0 
+                                        и с правой стороны у картинки убираем лишнее, зазор*/
+
+/*------------------------
+HEADER
+----------------------------*/
+
+.header {
+    background: #d5d1d5;
+    background-image: url("../img/bg_2.jpg");
+    /* opacity: .35;                        /* прозрачность картинки */
+    background-repeat: no-repeat;           /* растягивается картинка */
+    background-position: center;            /* центрировать картинку */
+    background-size: cover;
+    height: 50vh;                           /* масштабирование картинки */
+    min-height: 300px;
+
+color: #0c0827;
+text-align: center;
+
+
+display: flex;                          /* не всеми браузерами поддерж */
+flex-direction: column;                 /* текст колонками сверху вниз */
+align-items: center;                    /* выравнивание по центру */
+justify-content: center;                /* выравниваем текст по высоте картики */
+
+}
+
+.h_title {
+
+    font-size: 100px;                       /* размер шрифта */
+    margin-bottom: 30px;                    /* */
+    font-family: 'PT sans', sans-serif;     /* */
+    margin-top: -55px;                      /* выровнять текст относительно высоты */
+    color: #fdfdfe;
+  text-shadow: 0px 0px 5px #170621, 0px 0px 10px #4636af, 0px 0px 10px #b393d3,
+    0px 0px 20px #391e55;
+}
+
+.h_name {
+    font-size: 50px;                        /* */
+    line-height: 15px;                      /* высота кегля */
+    margin-bottom: 30px;
+    font-family: 'PT sans', sans-serif;
+    color: #fdfdfe;
+  text-shadow: 0px 0px 5px #170621, 0px 0px 10px #4636af, 0px 0px 10px #b393d3,
+    0px 0px 20px #2d2534;
+    word-spacing: 25px
+}
+
+.h_arrow {
+    font-size: 70px;
+    width: 10px;
+    margin-left: -30px;
+    position: absolute;
+    bottom: 600px;
+    left: 50%;
+    color: #fdfdfe;
+  text-shadow: 0px 0px 5px #30223e, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3,
+    0px 0px 20px #b393d3;
+
+}
+
+
+/* ************************************************************
+MENU
+***************************************************************/
+
+#menu {
+	overflow: hidden;
+	background: #726db985;
+
+}
+
+#menu ul {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li {
+	display: inline-block;
+}
+
+#menu a {
+	display: block;
+	padding: 0px 20px 0px 40px;
+	line-height: 120px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 25px;
+	font-weight: 200;
+	color: #FFF;
+	border: none;
+}
+
+#menu a:hover, #menu .current_page_item a {
+    font-size: 40px;                        /* размер шрифта меню 1 */
+    line-height: 15px;                      /* высота кегля */
+    margin-bottom: 30px;
+    color: #fffdfc;                       /* цвет шрифта меню 2 */
+  text-shadow: 0px 0px 15px #170621, 0px 0px 10px #4636af, 0px 0px 10px #b393d3,
+    0px 0px 20px #2d2534;
+    word-spacing: 25px
+}
+
+
+
+/* +++++++++++++++++++++++++++++
+
+INFO 
+
+++++++++++++++++++++++++++++++++ */
+.pf {                               /*  класс портфолио */
+    padding-top: 70px;              /* отступ над заголовком */
+    padding-bottom: 100px;}         /* отступ под блоками перед футером */
+ .pf-item {                         /*  класс отступы от дна на каждую строку */
+    margin-bottom: 20px;
+ }
+
+.title1 {                            /* Заголовок1 */
+    font-size: 46px;
+    color: #4636af;
+    margin-bottom: 50px;            /* выравнивание по низу */
+    text-align: center;             /* выравнивание заголовков текста */
+    text-shadow: 2px 2px 4px rgba(179, 147, 211, 0.1),
+    3px 4px 4px rgba(179, 147, 211, 0.15),
+    4px 6px 4px rgba(179, 147, 211, 0.2),
+    5px 8px 4px rgba(179, 147, 211, 0.25);
+}
+.title2 {                            /* Заголовок */
+    font-size: 46px;
+    color: #4636af;
+    margin-bottom: 50px;            /* выравнивание по низу */
+    text-align: center;             /* выравнивание заголовков текста */
+    text-shadow: 2px 2px 4px rgba(179, 147, 211, 0.1),
+    3px 4px 4px rgba(179, 147, 211, 0.15),
+    4px 6px 4px rgba(179, 147, 211, 0.2),
+    5px 8px 4px rgba(179, 147, 211, 0.25);
+}
+
+.title3 {                            /* Заголовок1 */
+    font-size: 26px;
+    color: #4636af;
+    margin-bottom: 50px;            /* выравнивание по низу */
+    text-align: center;             /* выравнивание заголовков текста */
+
+}
+.pf-item_img { 
+    margin-bottom: 20px;
+
+.pf-item_img {max-width: 100%;
+height: auto;}                        /*  100% отображения контейнера при схлопывании */
+}
+.pf-item-title {
+    font-size: 24px;
+    line-height: normal;            /* выравнивание по низу */
+    margin-bottom: 5px;
+    text-align:center;
+}
+
+.pf-item_title a {
+    text-decoration: none;      /* убрать ссылку-выделение */
+    color: #2708ed;
+    border-bottom: 1px solid #fff;    /* снизу ездит??? */
+}
+.pf-item_title a:hover {
+    color: #2708ed;
+}
+
+.pf-item_title a:hover {color: #0ebef4;
+}
+
+.pt-item_txt p {              /* применить для текстовых абзацев */
+        margin-top: 0;
+        margin-bottom: 15px;    /* отступ снизу */
+}
+
+hr {
+    margin: 40px 0;
+  }
+  
+  .hr1 {
+    border: 0;
+    border-top: 1px solid #CCC;
+  }
+  
+  .hr2 {
+    border: 0;
+    border-top: 1px dashed #CCC;
+  }
+
+
+/*-------------------------------------------------
+FOOTER
+------------------------------------------------------*/
+
+
+.footer {
+    background-color: #e2def8;      /* цвет заднего фона*/  /*  background-image: url("../img/piter.jpg"); */
+    color: rgb(52, 32, 129);                    /* цвет текста */
+    padding-top: 80px;                /* отступ сверху */ 
+    padding-bottom:100px;              /* отступ снизу */
+    
+}
+.footer p {                             /* параметры шрифта для футера */
+    margin-top: 0px;                    /* отступ сверху */
+    margin-bottom: 15px;                /* отступ снизу */
+}
+p.ft_name{
+    font-size:26px;                     /* размер шрифта */
+    line-height: normal;                /* высота шрифта */
+    margin-bottom: 20px;                 /* выравнивание снизу */
+}
+p.ft_soc {
+    color: #222573;
+    font-size: 30px;
+}   
+p.ft_soc_icon {color: #fff;
+    font-size: 30px;
+}
+p.ft_soc_icon a {
+    color: #211343;
+    text-decoration: none;
+    margin-right: 35px;         /* отступ между элементами */
+}
+p.ft_soc_icon a:hover {       /* чтобы выделить иконки, ховер - псевдокласс*/
+    color: #90d3e4;   
+}
+.button  {
+    font-family: 'PT Sans', serif;
+    font-weight: 700;
+    text-transform: uppercase;      /* сделать все заглавные */
+    letter-spacing: 1.5px;          /* расстояние между буквами */
+    text-decoration: none;
+    color:#3d3087;
+    display: inline-block;      /* линейный элемент, формат блок, обводка в виде рамки, наша кнопка */
+
+    border-width: 3px;          /* толщина рамки */
+    border-color: #38217a;
+    border-style: solid;        /* прямая линия */
+    border-radius: 45px;        /* скругление кнопки */
+    padding-bottom: 8px;
+    padding-top: 5px;          /* отступы по дну рамки */
+    padding-right: 25px;        /* отступы справа рамки */
+    padding-left: 25px;        /* отступы слева рамки */
+}
+
+.button:hover {      /* определяет стиль элемента при наведении мыши */
+    color: #2d2987;
+    background-color: #e3ebf0;
+}
+
+
+/* +++++++++++++++++++++++++++++
+Single Site
+++++++++++++++++++++++++++++++++ */
+
+
+.pf_sp {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.pf_sp img {
+margin-bottom: 50px;
+max-width: 90%;                 
+height: auto;
+display: block;                   /* чтобы кнопка была под картинкой, адапт */
+}
+
+.button_back {
+    font-weight: 700;
+    font-family: 'PT sans', sans-serif;
+    text-transform: uppercase;      /* сделать все заглавные */
+    letter-spacing: 1.5px;          /* расстояние между буквами */
+    text-decoration: none;
+    color:#020213;
+    text-align: center;
+    display: inline-block;      /* линейный элемент, формат блок, обводка в виде рамки, наша кнопка */
+
+    border-width: 3px;          /* толщина рамки */
+    border-color: #151516;
+    border-style: solid;        /* прямая линия */
+    border-radius: 45px;        /* скругление кнопки */
+    padding-bottom: 8px;
+    padding-top: 5px;          /* отступы по дну рамки */
+    padding-right: 25px;        /* отступы справа рамки */
+    padding-left: 25px;        /* отступы слева рамки */
+}
+.center-text {
+    width: 200px;               /* ширина... */
+    margin: auto;
+    text-align: center;
+}
+.button_back:hover {      /* определяет стиль элемента при наведении мыши */
+    color: #FFF;
+    background-color: black;
+}
+
+
+
+/* ++++++++++++++++++++++++
+ADAPTATION
+++++++++++++++++++++++++++*/
+
+@media (max-width:1200px) {
+    .container {
+        width: 100%;
+    }
+.collumn {
+    width: 100%;
+    margin: 0;      /* все отсутупы справа,слева,снизу и тд будут 0 */
+    margin-bottom: 20px;    /* чтобы колонки не наезжали друг на друга при ... */
+    padding-left: 10px;     /*  отступы от рамок */
+    padding-right: 10px;    /*  отступы от рамок */
+    text-align: center;      /* текст выравнивается по центру */
+}
+.header {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.h_title {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 14px;    /*  отступ от низа */
+}
+.h_slogan {
+    font-size: 20px;
+    line-height: 30px;    
+}
+.pf {padding-bottom: 30px;
+padding-top: 25px;}
+}
+
+.title {
+    font-size: 30px;
+    .footer {
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+}
+
+        /*  отображение самих картинок при схлопывании сайта */

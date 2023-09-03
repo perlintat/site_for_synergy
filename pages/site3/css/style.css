@@ -1,0 +1,103 @@
+*{
+    margin: 0;                  /* внешний отступ 0, сброс стилей */
+    padding: 0;                 /* внутренний отступ 0, сброс стилей */
+}
+a {                             /* стилизуем ссылки */
+    text-decoration: none;
+    transition: 0.3s case-out;}     /* скорость неведенных ссылок */
+li {
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    font-family: 'Noto Sans', sans-serif;}
+
+/* +++++++++++++++++++++++++++++
+Single Site BODY
+++++++++++++++++++++++++++++++++ */
+
+.pf_sp {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.pf_sp img {
+margin-bottom: 50px;
+max-width: 100%;                 
+height: auto;
+display: block;                   /* чтобы кнопка была под картинкой, адапт */
+}
+
+.button_back {
+    font-weight: 700;
+    font-family: 'PT sans', sans-serif;
+    text-transform: uppercase;      /* сделать все заглавные */
+    letter-spacing: 1.5px;          /* расстояние между буквами */
+    text-decoration: none;
+    color:#020213;
+    text-align: center;
+    display: inline-block;      /* линейный элемент, формат блок, обводка в виде рамки, наша кнопка */
+
+    border-width: 3px;          /* толщина рамки */
+    border-color: #151516;
+    border-style: solid;        /* прямая линия */
+    border-radius: 45px;        /* скругление кнопки */
+    padding-bottom: 8px;
+    padding-top: 8px;          /* отступы по дну рамки */
+    padding-right: 25px;        /* отступы справа рамки */
+    padding-left: 25px;        /* отступы слева рамки */
+}
+.center-text {
+    width: 200px;               /* ширина... */
+    margin: auto;
+    text-align: center;
+}
+.button_back:hover {      /* определяет стиль элемента при наведении мыши */
+    color: #FFF;
+    background-color: black;
+}
+
+/*++++++++++++++++++++++++++++++++
+Navigation
+++++++++++++++++++++++++++++++++ */
+nav {
+    margin: auto;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+.topnav {
+    background-color: #fff;
+    font-size: 14px;
+    margin-top: 20px;
+
+}
+.topnav a{                  /* ссылка */
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;     /* 14 - отступ сверху, 16 - отступ с боков */ 
+}
+.topnav a:hover {
+    border-bottom: 3px solid #000
+}
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .topnav a:not(:first-shild) {display:none
+    text-align: left;
+}
+
+.topnav a.icon {
+    float:rihgt;
+    margin-top: -7px;
+    display: block;
+    color: black;    
+}
+nav {
+    width: 100%;
+    height: 50px;
+    }
+
+}
